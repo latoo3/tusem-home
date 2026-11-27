@@ -1,0 +1,68 @@
+{
+  "sira": 110,
+  "slug": "metal-vazo-modelleri",
+  "ad": "METAL VAZO MODELLERİ",
+  "kapak": "/images/metal-vazo-modelleradeg-Pq6yjTRnZf7TrDqm.webp",
+  "urunler": [
+    {
+      "kod": "TUS-M-1525",
+      "ad": "METAL İKİLİ DARBUKA VAZO",
+      "gorsel": "/images/tus-m-1527-cBzk9hOF9yhO1wIl.webp",
+      "not": "KREM,SİYAH"
+    },
+    {
+      "kod": "TUS-M-1521",
+      "ad": "METAL DARBELİ VAZO",
+      "gorsel": "/images/tus-m-1521-8VDLdUGm7KpYbq4Y.png",
+      "varyantlar": [
+        {
+          "renk": "BRONZ",
+          "gorsel": "/images/darbeladeg-vazo-bronz-pfP87T6ocPmwia5V.png"
+        },
+        {
+          "renk": "GÜMÜŞ",
+          "gorsel": "/images/darbeladeg-vazo-gamaa-czSK3mPevuiGLefi.png"
+        },
+        {
+          "renk": "ALTIN",
+          "gorsel": "/images/darbeladeg-vazo-altin-1EyyxpwZm9efpBt2.png"
+        }
+      ],
+      "sayfa": "metal-darbeli-vazo"
+    },
+    {
+      "kod": "TUS-M-1525",
+      "ad": "METAL UFO VAZO",
+      "gorsel": "/images/tus-m-1525-jgifv3Igqu9aQfEN.webp",
+      "varyantlar": [
+        {
+          "renk": "BRONZ",
+          "gorsel": "/images/metal-ufo-vazo-bronz-cwv0xQt3KliVPS3q.webp"
+        },
+        {
+          "renk": "GÜMÜŞ",
+          "gorsel": "/images/metal-ufo-vazo-gamaa-QxPjusWvAaINlYt1.webp"
+        },
+        {
+          "renk": "ALTIN",
+          "gorsel": "/images/metal-ufo-vazo-altin-ePHmCK3QTRb5sPBu.webp"
+        },
+        {
+          "renk": "BEYAZ",
+          "gorsel": "/images/metal-ufo-vazo-beyaz-5yruQjRfaJ7e9imK.webp"
+        },
+        {
+          "renk": "SİYAH",
+          "gorsel": "/images/metal-ufo-vazo-sadegyah-KVtx50wPIjDweJjW.png"
+        }
+      ],
+      "sayfa": "metal-ufo-vazo"
+    },
+    {
+      "kod": "TUS-M-1539",
+      "ad": "DARBELİ UFO VAZO",
+      "gorsel": "/images/tus-m-1539-xnhGmIQbPDgX8luu.webp",
+      "not": "BRONZ,ALTIN,GÜMÜŞ"
+    }
+  ]
+}

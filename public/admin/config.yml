@@ -1,0 +1,204 @@
+# Tusem Home admin paneli (Sveltia CMS) ayarları.
+# Panel adresi: https://www.tusemhome.com/admin
+# Panelde yapılan her kayıt GitHub'daki main dalına commit olur ve site 1-2 dakikada güncellenir.
+
+backend:
+  name: github
+  repo: latoo3/tusem-home
+  branch: main
+  # GitHub girişini bu sitenin kendi Worker'ı yapar (worker/index.js).
+  base_url: https://tusem-home.celalusta3418.workers.dev
+  auth_endpoint: oauth/auth
+  commit_messages:
+    create: 'Panel: {{collection}} eklendi ({{slug}})'
+    update: 'Panel: {{collection}} güncellendi ({{slug}})'
+    delete: 'Panel: {{collection}} silindi ({{slug}})'
+    uploadMedia: 'Panel: görsel yüklendi ({{path}})'
+    deleteMedia: 'Panel: görsel silindi ({{path}})'
+
+app_title: Tusem Home Yönetim
+logo:
+  src: /images/gemini_generated_image_rhrf8grhrf8grhrf-mePg8NpqwEipno6Y.png
+site_url: https://www.tusemhome.com
+display_url: https://www.tusemhome.com
+
+media_folder: public/images
+public_folder: /images
+media_libraries:
+  default:
+    config:
+      max_file_size: 20000000
+      slugify_filename: true
+      # Telefondan çekilen büyük fotoğraflar yüklenirken otomatik küçültülür.
+      transformations:
+        raster_image:
+          format: webp
+          quality: 82
+          width: 1600
+          height: 1600
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+output:
+  omit_empty_optional_fields: true
+
+collections:
+  - name: kategoriler
+    label: Ürünler
+    label_singular: Kategori
+    description: Her kategori kendi ürünleriyle birlikte. Ürün eklemek için bir kategoriye tıklayın.
+    icon: inventory_2
+    folder: src/data/kategoriler
+    extension: json
+    format: json
+    create: true
+    delete: true
+    slug: '{{ad}}'
+    identifier_field: ad
+    summary: '{{ad}}'
+    sortable_fields:
+      fields: [sira, ad]
+      default:
+        field: sira
+    editor:
+      preview: false
+    fields:
+      - name: ad
+        label: Kategori adı
+        widget: string
+      - name: sira
+        label: Sıra
+        widget: number
+        value_type: int
+        default: 500
+        hint: Ürünler sayfasında küçük sayı önce gösterilir (ör. 10, 20, 30…).
+      - name: kapak
+        label: Kategori kapak görseli
+        widget: image
+        required: false
+        choose_url: false
+        hint: Boş bırakılırsa ilk ürünün görseli kullanılır.
+      - name: urunler
+        label: Ürünler
+        label_singular: Ürün
+        widget: list
+        collapsed: true
+        add_to_top: true
+        summary: '{{fields.kod}} – {{fields.ad}}'
+        hint: Sırayı değiştirmek için ürünleri sürükleyin. Yeni ürün listenin en üstüne eklenir.
+        fields:
+          - name: kod
+            label: Ürün kodu
+            widget: string
+            hint: Örnek TUS-SH-180-A
+          - name: ad
+            label: Ürün adı
+            widget: string
+          - name: gorsel
+            label: Fotoğraf
+            widget: image
+            required: false
+            choose_url: false
+          - name: not
+            label: Not
+            widget: string
+            required: false
+            hint: İsteğe bağlı, ör. 12'Lİ PAKET
+          - name: yeni
+            label: Yeni eklenenlerde göster
+            widget: boolean
+            required: false
+            default: false
+          - name: varyantlar
+            label: Renk / model seçenekleri
+            label_singular: Seçenek
+            widget: list
+            required: false
+            collapsed: true
+            summary: '{{fields.renk}}'
+            hint: Seçenek eklenirse ürünün kendi sayfası oluşur ve seçenekler orada gösterilir.
+            fields:
+              - name: renk
+                label: Renk / model adı
+                widget: string
+              - name: gorsel
+                label: Fotoğraf
+                widget: image
+                required: false
+                choose_url: false
+          - name: sayfa
+            label: Ürün sayfa adresi (teknik)
+            widget: string
+            required: false
+            hint: Genelde boş bırakın, ürün kodundan otomatik oluşur. Eski ürünlerde olan değeri değiştirmeyin.
+      - name: slug
+        label: Kategori sayfa adresi (teknik)
+        widget: string
+        required: false
+        pattern: ['^[a-z0-9-]*$', 'Sadece küçük harf (Türkçe harf olmadan), rakam ve tire (-) kullanın.']
+        hint: Boş bırakılırsa kategori adından otomatik oluşur. Mevcut kategorilerde değiştirmeyin, eski linkler bozulur.
+
+singletons:
+  - name: site
+    label: Site ve iletişim bilgileri
+    icon: storefront
+    file: src/data/site.json
+    editor:
+      preview: false
+    fields:
+      - { name: ad, label: Firma adı, widget: string }
+      - { name: slogan, label: Slogan, widget: string }
+      - { name: tanitim, label: Anasayfa tanıtım yazısı, widget: text }
+      - { name: adres, label: Adres, widget: text }
+      - name: telefon_whatsapp
+        label: Telefon / WhatsApp numaraları
+        widget: list
+        hint: İlk numara WhatsApp butonunda kullanılır. Her satıra bir numara.
+      - { name: eposta, label: E-posta adresleri, widget: list, hint: Her satıra bir adres. }
+      - { name: instagram, label: Instagram linki, widget: string }
+      - name: calisma_saatleri
+        label: Çalışma saatleri
+        widget: object
+        fields:
+          - { name: hafta_ici, label: Hafta içi, widget: string }
+          - { name: cumartesi, label: Cumartesi, widget: string }
+      - { name: harita, label: Google Harita adresi (teknik), widget: string }
+      - { name: logo, label: Logo, widget: image, choose_url: false }
+      - { name: favicon, label: Küçük simge (favicon), widget: image, choose_url: false }
+      - name: anasayfa_gorselleri
+        label: Anasayfa büyük görselleri
+        widget: image
+        multiple: true
+        choose_url: false
+      - { name: alt_banner, label: Anasayfa alt banner, widget: image, choose_url: false }
+      - name: meta
+        label: Google arama metinleri (SEO)
+        widget: object
+        collapsed: true
+        fields:
+          - name: anasayfa
+            label: Anasayfa
+            widget: object
+            fields:
+              - { name: baslik, label: Başlık, widget: string }
+              - { name: aciklama, label: Açıklama, widget: text }
+          - name: urunler
+            label: Ürünler sayfası
+            widget: object
+            fields:
+              - { name: baslik, label: Başlık, widget: string }
+              - { name: aciklama, label: Açıklama, widget: text }
+          - name: iletisim
+            label: İletişim sayfası
+            widget: object
+            fields:
+              - { name: baslik, label: Başlık, widget: string }
+              - { name: aciklama, label: Açıklama, widget: text }
+          - name: yeni-eklenenler
+            label: Yeni eklenenler sayfası
+            widget: object
+            fields:
+              - { name: baslik, label: Başlık, widget: string }
+              - { name: aciklama, label: Açıklama, widget: text }

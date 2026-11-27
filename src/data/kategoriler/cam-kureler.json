@@ -1,0 +1,53 @@
+{
+  "sira": 30,
+  "slug": "cam-kureler",
+  "ad": "CAM KÜRELER",
+  "kapak": "/images/cam-kareler-Y0rfkAltFjHCjFD0.webp",
+  "urunler": [
+    {
+      "kod": "TUS-HK-289",
+      "ad": "BÜYÜK BOY IŞIKLI MÜZİKLİ PÜSKÜRTMELİ KAR KÜRESİ",
+      "gorsel": "/images/tus-hk-289-zAeYoO2GDF4ss6p9.png"
+    },
+    {
+      "kod": "TUS-HK-903",
+      "ad": "BÜYÜK BOY KAR KÜRESİ I-M-P",
+      "gorsel": "/images/tus-hk-903-1-yFaQqjhu2Qra3pNc.png"
+    },
+    {
+      "kod": "TUS-HK-893",
+      "ad": "BÜYÜK BOY KAR KÜRESİ I-M-P",
+      "gorsel": "/images/tus-hk-893-7xiQ3qhksYVLkVeB.webp"
+    },
+    {
+      "kod": "TUS-HK-290",
+      "ad": "BÜYÜK BOY IŞIKLI MÜZİKLİ PÜSKÜRTMELİ KAR KÜRESİ",
+      "gorsel": "/images/tus-hk-290-1-4W8Ub2tXRQyhCzNN.png"
+    },
+    {
+      "kod": "TUS-HK-694",
+      "ad": "BÜYÜK BOY KAR KÜRESİ I-M-P",
+      "gorsel": "/images/tus-hk-694-IxZfRgeRG6oXlnCV.webp"
+    },
+    {
+      "kod": "TUS-HK-700",
+      "ad": "ORTA BOY IŞIKLI MÜZİKLİ KAR KÜRESİ",
+      "gorsel": "/images/tus-hk-700-1-85HqZExgLaxxOkU7.png"
+    },
+    {
+      "kod": "TUS-HK-907",
+      "ad": "ORTA BOY IŞIKLI MÜZİKLİ KAR KÜRESİ",
+      "gorsel": "/images/tus-hk-907-1-glKCCPHnWAkLBaoj.png"
+    },
+    {
+      "kod": "TUS-HK-910",
+      "ad": "ORTA BOY IŞIKLI MÜZİKLİ KAR KÜRESİ",
+      "gorsel": "/images/tus-hk-910-37KlqVRzgzNTZ4G9.webp"
+    },
+    {
+      "kod": "TUS-HK-221-222-227",
+      "ad": "IŞIKLI KAR KÜRESİ KÜÇÜK BOY",
+      "gorsel": "/images/tus-221-222-227-b74cemOdIGQNQpMm.png"
+    }
+  ]
+}

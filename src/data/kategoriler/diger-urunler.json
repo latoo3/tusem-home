@@ -1,0 +1,30 @@
+{
+  "sira": 60,
+  "slug": "diger-urunler",
+  "ad": "DİĞER ÜRÜNLER (CEP AYNASI,MATRUŞKA,LED MUM,3'LÜ MUMLUK)",
+  "kapak": "/images/gemini_generated_image_qormw8qormw8qorm-1-ZmNSp3RgoVW7lsPf.png",
+  "urunler": [
+    {
+      "kod": "TUS-HK-63-A-B-C-D",
+      "ad": "PLASTİK DESENLİ CEP AYNASI",
+      "gorsel": "/images/tus-hk-63-a-b-c-d-tZJ3QC3fnw50NsaX.webp",
+      "not": "12'Lİ PAKET"
+    },
+    {
+      "kod": "TUS-HK-191",
+      "ad": "5'Lİ AHŞAP MATRUŞKA",
+      "gorsel": "/images/tus-hk-191-RBJOX1ka5601zH5X.webp"
+    },
+    {
+      "kod": "TUS-TSM-04",
+      "ad": "LOTUS ÇİÇEK LED MUM",
+      "gorsel": "/images/tus-tsm-04-oYI4Ejni8kujZnXO.webp",
+      "not": "6'LI PAKET"
+    },
+    {
+      "kod": "TUS-EVM-4-11-12-13",
+      "ad": "DEKORATİF METAL 3'LÜ MUMLUK",
+      "gorsel": "/images/tus-evm-4-11-12-13-e7dYZuiber9ToSMS.webp"
+    }
+  ]
+}

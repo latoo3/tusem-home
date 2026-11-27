@@ -1,0 +1,95 @@
+{
+  "sira": 70,
+  "slug": "yapay-ciceksebze-meyve-modelleri",
+  "ad": "YAPAY ÇİÇEK,SEBZE - MEYVE MODELLERİ",
+  "kapak": "/images/yapay-assiassek-sebze-KqD40RcDxZ7JNN0q.jpg",
+  "urunler": [
+    {
+      "kod": "TUS-0018-13",
+      "ad": "LATEKS EVA ÇİÇEK",
+      "gorsel": "/images/lateks-eva-aadegaek-b4Pl2W9Ok86aRttE.webp",
+      "varyantlar": [
+        {
+          "renk": "SOMON",
+          "gorsel": "/images/whatsapp-image-2025-11-11-at-14.25.36-7yET4OIxqN6tupJO.jpeg"
+        },
+        {
+          "renk": "GRİ",
+          "gorsel": "/images/whatsapp-image-2025-11-11-at-14.25.01-hR7mOdEY2IwwC7Qt.jpeg"
+        },
+        {
+          "renk": "BEYAZ",
+          "gorsel": "/images/whatsapp-image-2025-11-11-at-14.24.44-rA2Wd2Z8HLpeGEY2.jpeg"
+        },
+        {
+          "renk": "YEŞİL",
+          "gorsel": "/images/tus-0018-13-yeaadegl-rccbOxMAD27Ns54P.png"
+        },
+        {
+          "renk": "KIRMIZI",
+          "gorsel": "/images/tus-0018-13-kirmizi-64aJ8aADWsAAFn61.png"
+        },
+        {
+          "renk": "KAHVERENGİ",
+          "gorsel": "/images/tus-0018-13-kahve-xleRErUF3HL1CYtp.png"
+        },
+        {
+          "renk": "İNCİ BEYAZI",
+          "gorsel": "/images/tus-0018-13-adegncadeg-beyazi-xuBrrIptzCgfhW6e.png"
+        },
+        {
+          "renk": "SİYAH",
+          "gorsel": "/images/tus-0018-13-sadegyah-3oKFUzttCeYisVZl.png"
+        },
+        {
+          "renk": "LACİVERT",
+          "gorsel": "/images/tus-0018-13-lacadegvert-jQg58Ke9uCoXUtWc.png"
+        }
+      ],
+      "sayfa": "lateks-cicek"
+    },
+    {
+      "kod": "TUS-EVI-0018",
+      "ad": "SAKSILI SARKAÇ ÇİÇEK",
+      "gorsel": "/images/tus-evi-0018-STLnZkMetNllVgzo.webp"
+    },
+    {
+      "kod": "TUS-EVI-0020",
+      "ad": "SAKSILI ÇİÇEK KARANFİL",
+      "gorsel": "/images/tus-evi-0020-ec8k6kuzhvrcqV2l.png"
+    },
+    {
+      "kod": "TUS-EVI-0019",
+      "ad": "SAKSILI ÇİÇEK MENEKŞE",
+      "gorsel": "/images/tus-evi-0019-MO92wje5xlkeYzf6.webp"
+    },
+    {
+      "kod": "TUS-TSM-55",
+      "ad": "ISLAK LALE",
+      "gorsel": "/images/tus-tsm-55-sari-6OdRLlPaeOOYZOSz.webp",
+      "varyantlar": [
+        {
+          "renk": "YEŞİL",
+          "gorsel": "/images/tus-tsm-55-mavadeg-oXqYZW0DeaM4iOEy.png"
+        },
+        {
+          "renk": "SARI",
+          "gorsel": "/images/tus-tsm-55-sari-6OdRLlPaeOOYZOSz.webp"
+        },
+        {
+          "renk": "PEMBE",
+          "gorsel": "/images/tus-tsm-55-pembe-ZoauwZzUBrJw28M0.png"
+        },
+        {
+          "renk": "BEYAZ",
+          "gorsel": "/images/tus-tsm-55-beyaz-zreigZcVs4Rzj1no.webp"
+        },
+        {
+          "renk": "SİYAH",
+          "gorsel": "/images/tus-tsm-55-sadegyah-xxiTHklsnyclYMQD.png"
+        }
+      ],
+      "sayfa": "islak-lale"
+    }
+  ]
+}

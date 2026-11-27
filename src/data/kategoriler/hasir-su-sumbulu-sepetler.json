@@ -1,0 +1,48 @@
+{
+  "sira": 50,
+  "slug": "hasir-su-sumbulu-sepetler",
+  "ad": "HASIR SU SÜMBÜLÜ SEPETLER",
+  "kapak": "/images/hasir-su-sambala-sepetler-085X7otBbrbdbbeM.webp",
+  "urunler": [
+    {
+      "kod": "TUS-2165",
+      "ad": "HASIR KARE PEÇETELİK",
+      "gorsel": "/images/tus-2165-MlO8pAfC6zW6Rs4Z.webp"
+    },
+    {
+      "kod": "TUS-2120",
+      "ad": "HASIR 3'LÜ YUVARLAK TEPSİ",
+      "gorsel": "/images/tus-2120-Fo2NNQE0A28iGbK9.webp"
+    },
+    {
+      "kod": "TUS-2115",
+      "ad": "HASIR 3'LÜ DİKDÖRTGEN TEPSİ",
+      "gorsel": "/images/tus-2115-Rl4etsaFRwFLwAin.webp"
+    },
+    {
+      "kod": "TUS-ALG-11581",
+      "ad": "3'LÜ DİKDÖRTGEN HASIR SEPET",
+      "gorsel": "/images/tus-alg-11581-3-la-dadegkdartgen-hasir-sepet-hM9dZRXZRSKVCrk2.webp"
+    },
+    {
+      "kod": "TUS-ALG-11580",
+      "ad": "3'LÜ OVAL HASIR SEPET",
+      "gorsel": "/images/tus-alg-11580-3-la-oval-hasir-sepet-PAsKzvdUe5SD5k9Z.webp"
+    },
+    {
+      "kod": "TUS-2175",
+      "ad": "HASIR 3'LÜ OVAL TEPSİ",
+      "gorsel": "/images/tus-2175-YSAmX4yKnPfWE7I1.webp"
+    },
+    {
+      "kod": "TUS-2145",
+      "ad": "HASIR KAŞIKLIK",
+      "gorsel": "/images/tus-2145-FSZxJ39ZCeqEi1lK.webp"
+    },
+    {
+      "kod": "TUS-ALG-11796",
+      "ad": "HASIR OVAL SEPET",
+      "gorsel": "/images/tus-alg-11796-3hNBKmjzEo10SoRu.webp"
+    }
+  ]
+}

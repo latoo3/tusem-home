@@ -1,0 +1,38 @@
+{
+  "sira": 80,
+  "slug": "hasir-seagres-sepetler",
+  "ad": "HASIR SEAGRES SEPETLER",
+  "kapak": "/images/adsa--z-tasara--m-E5HoAYmWAg7vl7ua.png",
+  "urunler": [
+    {
+      "kod": "TUS-AVL-ST-03",
+      "ad": "HASIR SEPET 20*20 CM",
+      "gorsel": "/images/tus-avl-st-03-aFTBqkyD23kOzk8W.png"
+    },
+    {
+      "kod": "TUS-AVL-ST-04",
+      "ad": "HASIR 3'LÜ SEPET",
+      "gorsel": "/images/tus-avl-st-04-qW7iJRZ6q9Kyxdzm.webp"
+    },
+    {
+      "kod": "TUS-AVL-ST-05",
+      "ad": "HASIR 2'Lİ SEPET",
+      "gorsel": "/images/tus-avl-st-05-mYaHGhc2ZVZs7s4H.png"
+    },
+    {
+      "kod": "TUS-AVL-ST-06",
+      "ad": "HASIR 2'Lİ SEPET",
+      "gorsel": "/images/tus-avl-st-06-BUPoBjItKb0bICRF.png"
+    },
+    {
+      "kod": "TUS-AVL-ST-07",
+      "ad": "HASIR KULPLU SEPET",
+      "gorsel": "/images/tus-avl-st-07-3PRiAzcfWGroOnvw.png"
+    },
+    {
+      "kod": "TUS-AVL-ST-09",
+      "ad": "HASIR SEPET",
+      "gorsel": "/images/tus-avl-st-09-aNLuhOFN0FemZYv7.png"
+    }
+  ]
+}
