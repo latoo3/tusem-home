@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import KategoriKarti from '../components/KategoriKarti.astro';
+import UrunKarti from '../components/UrunKarti.astro';
+import { site, kategoriler } from '../lib/catalog';
+
+const tumUrunler = kategoriler.flatMap((k) => k.urunler);
+---
+<Base title={site.meta.urunler.baslik} description={site.meta.urunler.aciklama}>
+  <section class="section">
+    <div class="container">
+      <h1>Ürünlerimiz</h1>
+      <p class="lead">Fiyat ve sepet içermeyen dijital kataloğumuz. Ürün koduyla bize ulaşıp sipariş verebilirsiniz.</p>
+      <input id="ara" class="search" type="search" placeholder="Ürün adı veya kodu ile ara (ör. TUS-HK-289, sepet)" aria-label="Ürün ara" />
+
+      <div id="sonuclar" class="search-results" hidden>
+        <p class="muted" id="sonuc-sayisi"></p>
+        <div class="grid">
+          {tumUrunler.map((u) => <UrunKarti urun={u} />)}
+        </div>
+      </div>
+
+      <div id="kategoriler" class="grid" style="margin-top:32px">
+        {kategoriler.map((k) => <KategoriKarti kategori={k} />)}
+      </div>
+    </div>
+  </section>
+  <script>
+    const ara = document.getElementById('ara') as HTMLInputElement;
+    const sonuclar = document.getElementById('sonuclar')!;
+    const kategoriler = document.getElementById('kategoriler')!;
+    const sayi = document.getElementById('sonuc-sayisi')!;
+    const kartlar = [...sonuclar.querySelectorAll<HTMLElement>('[data-ara]')];
+    ara.addEventListener('input', () => {
+      const q = ara.value.trim().toLocaleLowerCase('tr-TR');
+      sonuclar.hidden = !q;
+      kategoriler.hidden = !!q;
+      let n = 0;
+      for (const k of kartlar) {
+        const eslesti = q.split(/\s+/).every((p) => k.dataset.ara!.includes(p));
+        k.hidden = !eslesti;
+        if (eslesti) n++;
+      }
+      sayi.textContent = n ? `${n} ürün bulundu` : 'Sonuç bulunamadı. Farklı bir kelime deneyin veya bize WhatsApp ile yazın.';
+    });
+  </script>
+</Base>

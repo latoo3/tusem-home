@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import KategoriKarti from '../components/KategoriKarti.astro';
+import { site, kategoriler, img, whatsappLink } from '../lib/catalog';
+
+const toplamUrun = kategoriler.reduce((n, k) => n + k.urunler.length, 0);
+---
+<Base title={site.meta.anasayfa.baslik} description={site.meta.anasayfa.aciklama}>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <p class="eyebrow">İstoç · Toptan ev ve hediyelik eşya</p>
+        <h1>Hasır sepetten yapay çiçeğe, işletmeniz için geniş ürün yelpazesi</h1>
+        <p class="lead">{site.tanitim}</p>
+        <div class="btn-row">
+          <a class="btn" href="/urunler">Kataloğu incele</a>
+          <a class="btn btn-outline" href="/yenieklenenler">Yeni eklenenler</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src={img(site.anasayfa_gorselleri[2])} alt="Tusem Home mağazası ve ürünleri" fetchpriority="high" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Ürün kategorilerimiz</h2>
+      <p class="muted">{kategoriler.length} kategoride {toplamUrun} ürün. Fiyat ve sipariş için ürün koduyla bize yazmanız yeterli.</p>
+      <div class="grid" style="margin-top:24px">
+        {kategoriler.map((k) => <KategoriKarti kategori={k} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--bg-soft)">
+    <div class="container">
+      <h2>Nasıl sipariş verilir?</h2>
+      <p class="lead">Katalogdan beğendiğiniz ürünün kodunu not alın, WhatsApp veya telefonla bize ulaşın. İstoç'taki dükkanımızda da sizi bekliyoruz.</p>
+      <div class="btn-row">
+        <a class="btn btn-wa" href={whatsappLink('Merhaba, sipariş vermek istiyorum.')} target="_blank" rel="noopener">WhatsApp ile yazın</a>
+        <a class="btn btn-outline" href="/tusemhomeiletisim">Adres ve iletişim</a>
+      </div>
+    </div>
+  </section>
+</Base>

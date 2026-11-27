@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, whatsappLink } from '../lib/catalog';
+---
+<Base title={site.meta.iletisim.baslik} description={site.meta.iletisim.aciklama}>
+  <section class="section">
+    <div class="container">
+      <h1>İletişim</h1>
+      <p class="lead">İstoç'taki toptancı dükkanımızda sizleri bekliyoruz. Sipariş ve fiyat bilgisi için WhatsApp'tan yazabilir veya arayabilirsiniz.</p>
+      <div class="contact-grid" style="margin-top:32px">
+        <ul class="info-list">
+          <li><strong>Adres</strong>{site.adres}</li>
+          <li>
+            <strong>Telefon / WhatsApp</strong>
+            {site.telefon_whatsapp.map((t) => (<><a href={`tel:${t.replace(/\s/g, '')}`}>{t}</a><br /></>))}
+          </li>
+          <li>
+            <strong>E-posta</strong>
+            {site.eposta.map((e) => (<><a href={`mailto:${e}`}>{e}</a><br /></>))}
+          </li>
+          <li>
+            <strong>Çalışma saatleri</strong>
+            Hafta içi: {site.calisma_saatleri.hafta_ici}<br />Cumartesi: {site.calisma_saatleri.cumartesi}<br />Pazar: Kapalı
+          </li>
+          <li><strong>Instagram</strong><a href={site.instagram} target="_blank" rel="noopener">@tusemhome</a></li>
+          <li>
+            <a class="btn btn-wa" href={whatsappLink('Merhaba, bilgi almak istiyorum.')} target="_blank" rel="noopener">WhatsApp ile yazın</a>
+          </li>
+        </ul>
+        <iframe src={site.harita} title="Tusem Home konumu" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</Base>

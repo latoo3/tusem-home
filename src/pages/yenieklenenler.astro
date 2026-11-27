@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import UrunKarti from '../components/UrunKarti.astro';
+import { site, kategoriler, whatsappLink } from '../lib/catalog';
+
+// Bir ürünü burada göstermek için catalog.json'da ürüne "yeni": true ekleyin.
+const yeniler = kategoriler.flatMap((k) => k.urunler).filter((u) => u.yeni);
+---
+<Base title={`${site.meta['yeni-eklenenler'].baslik} | Tusem Home`} description={site.meta['yeni-eklenenler'].aciklama}>
+  <section class="section">
+    <div class="container">
+      <h1>Yeni eklenenler</h1>
+      <p class="lead">{site.meta['yeni-eklenenler'].aciklama}</p>
+      {yeniler.length ? (
+        <div class="grid" style="margin-top:24px">{yeniler.map((u) => <UrunKarti urun={u} />)}</div>
+      ) : (
+        <>
+          <p class="muted" style="margin-top:24px">Yeni ürünlerimiz çok yakında burada olacak. Stoğa yeni giren ürünleri sormak için bize yazabilirsiniz.</p>
+          <div class="btn-row">
+            <a class="btn btn-wa" href={whatsappLink('Merhaba, yeni gelen ürünleriniz hakkında bilgi almak istiyorum.')} target="_blank" rel="noopener">Yeni ürünleri sor</a>
+            <a class="btn btn-outline" href="/urunler">Tüm katalog</a>
+          </div>
+        </>
+      )}
+    </div>
+  </section>
+</Base>

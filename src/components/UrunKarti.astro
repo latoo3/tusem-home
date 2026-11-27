@@ -1,0 +1,28 @@
+---
+import { img, urunSayfasi, whatsappLink, baslikYap, type Urun } from '../lib/catalog';
+
+interface Props { urun: Urun }
+const { urun } = Astro.props;
+const sayfa = urunSayfasi(urun);
+const ad = baslikYap(urun.ad);
+const mesaj = `Merhaba, ${urun.kod} kodlu "${ad}" ürünü hakkında bilgi almak istiyorum.`;
+---
+<article class="card" data-ara={`${urun.kod} ${urun.ad}`.toLocaleLowerCase('tr-TR')}>
+  {sayfa ? (
+    <a href={`/${sayfa}`} class="card-img" aria-label={`${ad} renk seçenekleri`}>
+      <img src={img(urun.gorsel)} alt={ad} loading="lazy" decoding="async" />
+    </a>
+  ) : (
+    <div class="card-img"><img src={img(urun.gorsel)} alt={ad} loading="lazy" decoding="async" /></div>
+  )}
+  <div class="card-body">
+    <span class="code">{urun.kod}</span>
+    <span class="card-title">{ad}</span>
+    {urun.not && <span class="note">{urun.not}</span>}
+    {urun.varyantlar?.length ? <span><span class="chip">{urun.varyantlar.length} seçenek</span></span> : null}
+    <div class="card-actions">
+      {sayfa && <a href={`/${sayfa}`}>Seçenekleri gör →</a>}
+      <a class="wa" href={whatsappLink(mesaj)} target="_blank" rel="noopener">WhatsApp ile sor</a>
+    </div>
+  </div>
+</article>

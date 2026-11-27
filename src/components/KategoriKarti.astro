@@ -1,0 +1,16 @@
+---
+import { img, baslikYap, type Kategori } from '../lib/catalog';
+
+interface Props { kategori: Kategori }
+const { kategori } = Astro.props;
+const kapak = kategori.kapak ?? kategori.urunler.find((u) => u.gorsel)?.gorsel ?? null;
+---
+<a href={`/${kategori.slug}`} class="card">
+  <div class={`card-img ${kategori.kapak ? 'cover' : ''}`}>
+    <img src={img(kapak)} alt={baslikYap(kategori.ad)} loading="lazy" decoding="async" />
+  </div>
+  <div class="card-body">
+    <span class="card-title">{baslikYap(kategori.ad)}</span>
+    <span class="note">{kategori.urunler.length} ürün</span>
+  </div>
+</a>

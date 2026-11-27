@@ -1,0 +1,78 @@
+---
+import Base from '../layouts/Base.astro';
+import UrunKarti from '../components/UrunKarti.astro';
+import { kategoriler, img, urunSayfasi, whatsappLink, baslikYap, type Kategori, type Urun } from '../lib/catalog';
+
+export function getStaticPaths() {
+  const kategoriYollari = kategoriler.map((kategori) => ({
+    params: { slug: kategori.slug },
+    props: { tur: 'kategori' as const, kategori },
+  }));
+  const urunYollari = kategoriler.flatMap((kategori) =>
+    kategori.urunler
+      .filter((u) => urunSayfasi(u))
+      .map((urun) => ({
+        params: { slug: urunSayfasi(urun)! },
+        props: { tur: 'urun' as const, kategori, urun },
+      })),
+  );
+  return [...kategoriYollari, ...urunYollari];
+}
+
+type Props = { tur: 'kategori'; kategori: Kategori } | { tur: 'urun'; kategori: Kategori; urun: Urun };
+const props = Astro.props as Props;
+const { kategori } = props;
+const katAd = baslikYap(kategori.ad);
+---
+{props.tur === 'kategori' ? (
+  <Base
+    title={`${katAd} | Tusem Home`}
+    description={`${katAd}: Tusem Home toptan ürün kataloğu. ${kategori.urunler.map((u) => baslikYap(u.ad)).slice(0, 4).join(', ')} ve daha fazlası.`}
+    image={kategori.kapak ?? kategori.urunler[0]?.gorsel}
+  >
+    <section class="section">
+      <div class="container">
+        <nav class="crumbs"><a href="/">Anasayfa</a> / <a href="/urunler">Ürünler</a> / {katAd}</nav>
+        <h1>{katAd}</h1>
+        <p class="muted">{kategori.urunler.length} ürün · Fiyat bilgisi için ürün koduyla bize ulaşın.</p>
+        <div class="grid" style="margin-top:24px">
+          {kategori.urunler.map((u) => <UrunKarti urun={u} />)}
+        </div>
+      </div>
+    </section>
+  </Base>
+) : (
+  <Base
+    title={`${props.urun.kod} ${baslikYap(props.urun.ad)} | Tusem Home`}
+    description={`${baslikYap(props.urun.ad)} (${props.urun.kod}) renk ve model seçenekleri: ${props.urun.varyantlar!.map((v) => baslikYap(v.renk)).join(', ')}.`}
+    image={props.urun.gorsel}
+  >
+    <section class="section">
+      <div class="container">
+        <nav class="crumbs">
+          <a href="/">Anasayfa</a> / <a href="/urunler">Ürünler</a> / <a href={`/${kategori.slug}`}>{katAd}</a> / {props.urun.kod}
+        </nav>
+        <span class="code">{props.urun.kod}</span>
+        <h1>{baslikYap(props.urun.ad)}</h1>
+        {props.urun.not && <p class="muted">{props.urun.not}</p>}
+        <p class="muted">{props.urun.varyantlar!.length} seçenek mevcut. Sipariş verirken ürün kodu ile birlikte seçeneği belirtmeniz yeterli.</p>
+        <div class="grid" style="margin-top:24px">
+          {props.urun.varyantlar!.map((v) => {
+            const renk = baslikYap(v.renk);
+            const mesaj = `Merhaba, ${props.urun.kod} kodlu "${baslikYap(props.urun.ad)}" ürününün ${renk} seçeneği hakkında bilgi almak istiyorum.`;
+            return (
+              <article class="card">
+                <div class="card-img"><img src={img(v.gorsel)} alt={`${baslikYap(props.urun.ad)} - ${renk}`} loading="lazy" decoding="async" /></div>
+                <div class="card-body">
+                  <span class="card-title">{renk}</span>
+                  <div class="card-actions"><a class="wa" href={whatsappLink(mesaj)} target="_blank" rel="noopener">WhatsApp ile sor</a></div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+        <div class="btn-row"><a class="btn btn-outline" href={`/${kategori.slug}`}>← {katAd}</a></div>
+      </div>
+    </section>
+  </Base>
+)}
