@@ -1,0 +1,9 @@
+// Cloudflare ayarı: build sonrası dist/ klasöründeki statik site yayınlanır.
+{
+  "name": "tusem-home",
+  "compatibility_date": "2025-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
