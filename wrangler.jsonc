@@ -11,5 +11,7 @@
     "run_worker_first": ["/oauth/*"]
   },
   // Cloudflare panelinden eklenen ayarlar her yayında silinmesin.
-  "keep_vars": true
+  "keep_vars": true,
+  // Main dışındaki dallar (PR) için Cloudflare önizleme ortamı.
+  "previews": {}
 }
