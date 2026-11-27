@@ -1,0 +1,41 @@
+{
+  "sira": 20,
+  "slug": "kutu-modelleri",
+  "ad": "KUTU MODELLERİ",
+  "kapak": "/images/kutu-modelleradeg-13yJH04GStStu3za.webp",
+  "urunler": [
+    {
+      "kod": "TUS-SRN-0006",
+      "ad": "6'LI RENKLİ KARTON KUTU",
+      "gorsel": "/images/tus-srn-0006-kraft-9Vb2aMY06UleSJuf.png",
+      "varyantlar": [
+        {
+          "renk": "KRAFT",
+          "gorsel": "/images/tus-srn-0006-kraft-9Vb2aMY06UleSJuf.png"
+        },
+        {
+          "renk": "SİYAH",
+          "gorsel": "/images/tus-srn-0006-sadegyah-1-9dlVLiBfJllQpuJB.webp"
+        },
+        {
+          "renk": "KIRMIZI",
+          "gorsel": "/images/tus-srn-0006-kirmizi-EoQzEP3tsruIQqaH.png"
+        },
+        {
+          "renk": "YEŞİL",
+          "gorsel": "/images/tus-srn-0006-yeaadegl-8okJ0fjEJs2LNR1t.webp"
+        },
+        {
+          "renk": "DAMALI",
+          "gorsel": "/images/tus-srn-0006-damali-AMuN8fiFvKB7yhg0.png"
+        }
+      ],
+      "sayfa": "6li-karton-kutu"
+    },
+    {
+      "kod": "TUS-SRN-KLP-01",
+      "ad": "3'LÜ KARTON KALP KUTU",
+      "gorsel": "/images/tus-srn-klp-01-ShPCTl0OE40BPOeB.png"
+    }
+  ]
+}

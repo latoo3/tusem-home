@@ -24,22 +24,35 @@ Görseller `public/images/` klasörüne iner. Sonra bunları commit edip GitHub'
 
 ## Ürün ekleme ve düzenleme
 
-Tüm içerik tek bir dosyada: **`src/data/catalog.json`**.
+En kolay yol **admin paneli**: https://www.tusemhome.com/admin
 
-- **Yeni ürün:** ilgili kategorinin `urunler` listesine ekleyin. Görseli `public/images/` klasörüne koyun.
+GitHub hesabıyla giriş yapılır (hesabın bu repoda "collaborator" olması gerekir). Panelde kategori ve ürün eklenir, silinir, fotoğraf yüklenir; "Kaydet" denince değişiklik GitHub'a commit olur ve site 1-2 dakikada güncellenir. Yüklenen fotoğraflar otomatik olarak küçültülüp WebP'ye çevrilir.
+
+> Panelden değişiklik yapıldıktan sonra bilgisayarda kodla çalışmadan önce mutlaka `git pull` yapın.
+
+İçerik dosyaları (elle düzenlemek isterseniz):
+
+- **`src/data/kategoriler/*.json`**: her kategori ayrı dosya. `sira` (küçük önce gösterilir), `slug` (sayfa adresi), `ad`, `kapak`, `urunler`.
   ```json
-  { "kod": "TUS-XXX-01", "ad": "ÜRÜN ADI", "gorsel": "images/dosya-adi.webp" }
+  { "kod": "TUS-XXX-01", "ad": "ÜRÜN ADI", "gorsel": "/images/dosya-adi.webp" }
   ```
-- **Renk/model seçenekleri:** ürüne `"varyantlar": [{ "renk": "SİYAH", "gorsel": "images/..." }]` ekleyin. Ürünün seçeneklerini gösteren sayfa kendiliğinden oluşur.
-- **Yeni eklenenler sayfası:** ürüne `"yeni": true` ekleyin.
-- **Not (ör. paket adedi):** `"not": "12'Lİ PAKET"`
-- **Yeni kategori:** `kategoriler` listesine `slug`, `ad`, `kapak` ve `urunler` alanlarıyla ekleyin. Kategori sayfası `/slug` adresinde oluşur.
-- **İletişim bilgileri, çalışma saatleri, SEO metinleri:** `site` bölümünde.
+- **Renk/model seçenekleri:** ürüne `"varyantlar": [{ "renk": "SİYAH", "gorsel": "/images/..." }]`. Ürünün seçeneklerini gösteren sayfa kendiliğinden oluşur.
+- **Yeni eklenenler sayfası:** `"yeni": true`. **Not:** `"not": "12'Lİ PAKET"`
+- **`src/data/site.json`**: iletişim bilgileri, çalışma saatleri, SEO metinleri.
+
+### Admin paneli nasıl çalışıyor
+
+- `public/admin/` : panel ([Sveltia CMS](https://sveltiacms.app), CDN'den yüklenir) ve ayarları (`config.yml`).
+- `worker/index.js` : GitHub girişini yapan küçük Cloudflare Worker kodu (`/oauth/auth`, `/oauth/callback`). Diğer tüm adresler statik siteden sunulur.
+- Cloudflare'de Worker'a iki secret tanımlı olmalı: `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` (GitHub > Settings > Developer settings > OAuth Apps, callback: `https://tusem-home.celalusta3418.workers.dev/oauth/callback`).
 
 ## Yapı
 
 ```
-src/data/catalog.json      tüm içerik
+src/data/kategoriler/       her kategori ve ürünleri (bir dosya = bir kategori)
+src/data/site.json          iletişim bilgileri, SEO metinleri
+public/admin/               admin paneli (Sveltia CMS)
+worker/index.js             admin paneli GitHub girişi
 src/pages/                 sayfalar (anasayfa, ürünler, kategori/ürün, yeni eklenenler, iletişim)
 src/components/            ürün ve kategori kartları
 src/layouts/Base.astro     header, footer, SEO etiketleri, WhatsApp butonu

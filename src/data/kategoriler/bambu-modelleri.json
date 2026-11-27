@@ -1,0 +1,33 @@
+{
+  "sira": 90,
+  "slug": "bambu-modelleri",
+  "ad": "BAMBU ÜRÜNLER",
+  "kapak": "/images/bambu-a1-4ra1-4nler-SOgXZmHOqIQctN05.png",
+  "urunler": [
+    {
+      "kod": "TUS-ALG-11744",
+      "ad": "PLEKSİ KAPAKLI 6 BÖLMELİ BAMBU KUTU",
+      "gorsel": "/images/tus-alg-11744-8W4EFDB28cJGDZBO.png"
+    },
+    {
+      "kod": "TUS-ALG-11323",
+      "ad": "2'Lİ BAMBU ORGANİZER",
+      "gorsel": "/images/tus-alg-11323-BfvShkvdN52bMwJF.png"
+    },
+    {
+      "kod": "TUS-ALG-11600",
+      "ad": "3'LÜ RENKLİ KARE BAMBU ORGANİZER",
+      "gorsel": "/images/tus-alg-11600-EN9chj1TLmNE20Y1.png"
+    },
+    {
+      "kod": "TUS-ALG-11598",
+      "ad": "3'LÜ RENKLİ DİKDÖRTGEN BAMBU ORGANİZER",
+      "gorsel": "/images/tus-alg-11598-F27eKUH9Qd0ReYPF.webp"
+    },
+    {
+      "kod": "TUS-ALG-11602",
+      "ad": "3'LÜ RENKLİ OVAL BAMBU ORGANİZER",
+      "gorsel": "/images/tus-alg-11602-XbLMOfk7OUgK2tnM.webp"
+    }
+  ]
+}

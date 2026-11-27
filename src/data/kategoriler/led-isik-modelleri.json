@@ -1,0 +1,39 @@
+{
+  "sira": 10,
+  "slug": "led-isik-modelleri",
+  "ad": "LED IŞIK MODELLERİ",
+  "kapak": "/images/led-iaik-modelleradeg-PjXfs7w0DRdLrisa.webp",
+  "urunler": [
+    {
+      "kod": "TUS-SH-1-5",
+      "ad": "PİLLİ RENKLİ TOP IŞIK",
+      "gorsel": "/images/tus-sh-1-5-2-B7ponwc7eGUecHBt.webp",
+      "varyantlar": [
+        {
+          "renk": "MOR",
+          "gorsel": "/images/tus-sh-1-5-mor-lsgd3sQcjkfc1efJ.webp"
+        },
+        {
+          "renk": "BEYAZ",
+          "gorsel": "/images/tus-sh-1-5-beyaz-xMJ9XRkfAAKJdwfE.webp"
+        }
+      ],
+      "sayfa": "tus-sh-1-5-pilli-renkli-top-isik"
+    },
+    {
+      "kod": "TUS-SH-180-A",
+      "ad": "3 MT PİLLİ PERİ LED IŞIK",
+      "gorsel": "/images/tus-sh-180-a-jfGLoaUlkvpC5RLO.jpg"
+    },
+    {
+      "kod": "TUS-SH-1212",
+      "ad": "2 MT PİLLİ YILDIZ IŞIK",
+      "gorsel": "/images/tus-sh-1212-2-UsTzJqICRx2B8jcF.png"
+    },
+    {
+      "kod": "TUS-SH-213",
+      "ad": "2 MT FLAMİNGO PİLLİ LED IŞIK",
+      "gorsel": "/images/tus-sh-213-2-NKLy8CkzWLCNhssl.png"
+    }
+  ]
+}

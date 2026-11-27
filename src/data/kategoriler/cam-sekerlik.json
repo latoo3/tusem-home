@@ -1,0 +1,31 @@
+{
+  "sira": 120,
+  "slug": "cam-sekerlik",
+  "ad": "RENKLİ CAM ŞEKERLİKLER",
+  "kapak": "/images/aekerladegk-katalog-kapaai-AQcO5P9RhmeexbeX.webp",
+  "urunler": [
+    {
+      "kod": "TUS-MY-0020",
+      "ad": "RENKLİ CAM ŞEKERLİK",
+      "gorsel": "/images/tus-my-0020-mavadeg-19ASZmmBFqorlUzO.webp",
+      "varyantlar": [
+        {
+          "renk": "MAVİ",
+          "gorsel": "/images/tus-my-0020-mavadeg-19ASZmmBFqorlUzO.webp"
+        },
+        {
+          "renk": "BAL",
+          "gorsel": "/images/tus-my-0020-bal-1-aovAdt27mVssZ2pB.webp"
+        },
+        {
+          "renk": "YEŞİL",
+          "gorsel": "/images/tus-my-0020-yeaadegl-1-JfqfOgdAOZ4I4BMs.webp"
+        },
+        {
+          "renk": "MOR",
+          "gorsel": "/images/tus-my-0020-mor-6PlJt8vigtk82Tcy.webp"
+        }
+      ]
+    }
+  ]
+}

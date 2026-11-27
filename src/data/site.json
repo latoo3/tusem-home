@@ -1,0 +1,46 @@
+{
+  "ad": "Tusem Home",
+  "slogan": "Hediyelik eşya, hasır sepet ve yapay çiçek çeşitleri",
+  "tanitim": "Ev ve yaşam alanları için ağırlıklı olarak sepet çeşitleri, hediyelik eşya ve yapay çiçek ürünlerinde birçok çeşit! İşletmenizin ihtiyacı olan geniş toptan ürün yelpazesini doğrudan ithalatçı güvencesiyle sunuyoruz.",
+  "meta": {
+    "anasayfa": {
+      "baslik": "Tusem Home - Hediyelik eşya, hasır sepet ve yapay çiçek çeşitleri",
+      "aciklama": "İstoç'ta hediyelik ev eşyaları, hasır sepetler ve yapay çiçek çeşitleri sunan Tusem Home ile evinizi güzelleştirin. İşletmeniz için uygun fiyatlı ve kaliteli ürünlere Tusem Home ile ulaşabilirsiniz."
+    },
+    "urunler": {
+      "baslik": "Tusem Home Ürünler",
+      "aciklama": "Tusem Home güncel toptan ürünler burada! İstoç merkezli toptancı firmanız olarak ev aksesuarları ve züccaciye ürünlerinin en yeni modellerini inceleyin. Fiyat ve sepet içermeyen bu dijital katalog üzerinden ürün kodlarıyla bizimle iletişime geçip sipariş verebilirsiniz."
+    },
+    "iletisim": {
+      "baslik": "Tusem Home İletişim",
+      "aciklama": "Tusem Home ile hediyelik ev eşyaları hakkında bilgi almak için iletişime geçin. İletişim ve adres bilgilerimiz burada. İstoç'taki toptancı dükkanımızda sizleri bekliyoruz."
+    },
+    "yeni-eklenenler": {
+      "baslik": "Yeni Eklenenler",
+      "aciklama": "Doğrudan ithalatçı güvencemizle stoklarımıza yeni eklenen yüzlerce çeşit dekoratif ev ve yaşam ürünü burada! Hasır sepetlerden bambu çözümlere, modern cam kürelerden dekoratif saksılıklara kadar piyasanın en güncel ve trend ürünlerini toptan fiyat avantajıyla ilk siz keşfedin."
+    }
+  },
+  "adres": "İstoç Ticaret Merkezi, 3. Ada, 2419. Sk. No:142, 34218 Bağcılar / İstanbul",
+  "telefon_whatsapp": [
+    "+90 535 300 20 64",
+    "+90 534 591 78 16"
+  ],
+  "eposta": [
+    "tusemhome@gmail.com",
+    "byrm13@hotmail.com"
+  ],
+  "instagram": "https://www.instagram.com/tusemhome/",
+  "calisma_saatleri": {
+    "hafta_ici": "07.30 - 17.30",
+    "cumartesi": "07.30 - 14.00"
+  },
+  "harita": "https://maps.google.com/maps?q=Tusem%20Home%20Ba%C4%9Fc%C4%B1lar,%20%C4%B0stanbul&t=m&z=13&ie=UTF8&output=embed",
+  "logo": "/images/tusem-logo2-YZ9Er4aOvxhKxjkz.png",
+  "favicon": "/images/gemini_generated_image_rhrf8grhrf8grhrf-mePg8NpqwEipno6Y.png",
+  "anasayfa_gorselleri": [
+    "/images/bir-baala--k-ekleyin-2-OAu9XoqbFXOFPpEg.png",
+    "/images/bir-baala--k-ekleyin-5-JInldufaz2P8KLZg.png",
+    "/images/da1-4kkan-foto-ana-ZJMBZp6H9Q9Q78fM.webp"
+  ],
+  "alt_banner": "/images/paragraf-metniniz-3-Yle4rZGwleUP7k5y.png"
+}

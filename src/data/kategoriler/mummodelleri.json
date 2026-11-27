@@ -1,0 +1,28 @@
+{
+  "sira": 130,
+  "slug": "mummodelleri",
+  "ad": "MUM MODELLERİ",
+  "kapak": null,
+  "urunler": [
+    {
+      "kod": "TUS-AF-01",
+      "ad": "FİTİLLİ MUM 12 CM",
+      "gorsel": null
+    },
+    {
+      "kod": "TUS-AF-02",
+      "ad": "FİTİLLİ MUM 9 CM",
+      "gorsel": "/images/tus-af-02-KBC4apInRk1Z9u1V.png"
+    },
+    {
+      "kod": "TUS-AF-03",
+      "ad": "MİSKET MUM BÜYÜK",
+      "gorsel": "/images/tus-af-03-jYgNtLd5SAYabzv8.png"
+    },
+    {
+      "kod": "TUS-AF-04",
+      "ad": "MİSKET MUM KÜÇÜK",
+      "gorsel": "/images/tus-af-04-wELRSVtBbmztEpvd.png"
+    }
+  ]
+}

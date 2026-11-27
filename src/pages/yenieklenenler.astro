@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import UrunKarti from '../components/UrunKarti.astro';
 import { site, kategoriler, whatsappLink } from '../lib/catalog';
 
-// Bir ürünü burada göstermek için catalog.json'da ürüne "yeni": true ekleyin.
+// Bir ürünü burada göstermek için admin panelinde ürünün "Yeni eklenenlerde göster" kutusunu işaretleyin.
 const yeniler = kategoriler.flatMap((k) => k.urunler).filter((u) => u.yeni);
 ---
 <Base title={`${site.meta['yeni-eklenenler'].baslik} | Tusem Home`} description={site.meta['yeni-eklenenler'].aciklama}>
