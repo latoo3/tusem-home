@@ -53,6 +53,23 @@ export const kategoriler: Kategori[] = Object.values(kategoriDosyalari)
 export const img = (p: string | null | undefined) =>
   p ? '/' + p.replace(/^\/+/, '') : '/placeholder.svg';
 
+/**
+ * Derlemede scripts/gorsel-optimize.mjs'in ürettiği küçültülmüş sürümün adresi:
+ * "/images/x.png" -> "/images/<klasor>/x.webp". SVG/GIF ve /images dışındaki görseller
+ * olduğu gibi kalır. "npm run dev" sırasında küçük görseller üretilmediği için orijinali döner.
+ */
+const kucukSurum = (klasor: string) => (p: string | null | undefined) => {
+  const yol = img(p);
+  if (import.meta.env.DEV || !/^\/images\/.+\.(png|jpe?g|webp)$/i.test(yol)) return yol;
+  return yol.replace(/^\/images\//, `/images/${klasor}/`).replace(/\.[^./]+$/, '.webp');
+};
+
+/** Kart görseli (uzun kenar 600 px, webp): "/images/x.png" -> "/images/k/x.webp" */
+export const kucukImg = kucukSurum('k');
+
+/** Anasayfa hero görseli (uzun kenar 1200 px, webp): "/images/x.png" -> "/images/h/x.webp" */
+export const heroImg = kucukSurum('h');
+
 /** Varyantı olan ürünlerin kendi sayfası (eski sitedeki adresler korunur). */
 export const urunSayfasi = (u: Urun) =>
   u.varyantlar?.length ? u.sayfa?.trim() || adresYap(u.kod) : undefined;

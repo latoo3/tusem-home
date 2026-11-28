@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import KategoriKarti from '../components/KategoriKarti.astro';
-import { site, kategoriler, img, whatsappLink } from '../lib/catalog';
+import { site, kategoriler, heroImg, whatsappLink } from '../lib/catalog';
 
 const toplamUrun = kategoriler.reduce((n, k) => n + k.urunler.length, 0);
 ---
@@ -18,7 +18,7 @@ const toplamUrun = kategoriler.reduce((n, k) => n + k.urunler.length, 0);
         </div>
       </div>
       <div class="hero-img">
-        <img src={img(site.anasayfa_gorselleri[2])} alt="Tusem Home mağazası ve ürünleri" fetchpriority="high" />
+        <img src={heroImg(site.anasayfa_gorselleri[2])} alt="Tusem Home mağazası ve ürünleri" width="1200" height="900" fetchpriority="high" />
       </div>
     </div>
   </section>

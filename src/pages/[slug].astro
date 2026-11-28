@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import UrunKarti from '../components/UrunKarti.astro';
-import { kategoriler, img, urunSayfasi, whatsappLink, baslikYap, type Kategori, type Urun } from '../lib/catalog';
+import { kategoriler, kucukImg, urunSayfasi, whatsappLink, baslikYap, type Kategori, type Urun } from '../lib/catalog';
 
 export function getStaticPaths() {
   const kategoriYollari = kategoriler.map((kategori) => ({
@@ -62,7 +62,7 @@ const katAd = baslikYap(kategori.ad);
             const mesaj = `Merhaba, ${props.urun.kod} kodlu "${baslikYap(props.urun.ad)}" ürününün ${renk} seçeneği hakkında bilgi almak istiyorum.`;
             return (
               <article class="card">
-                <div class="card-img"><img src={img(v.gorsel)} alt={`${baslikYap(props.urun.ad)} - ${renk}`} loading="lazy" decoding="async" /></div>
+                <div class="card-img"><img src={kucukImg(v.gorsel)} alt={`${baslikYap(props.urun.ad)} - ${renk}`} width="600" height="600" loading="lazy" decoding="async" /></div>
                 <div class="card-body">
                   <span class="card-title">{renk}</span>
                   <div class="card-actions"><a class="wa" href={whatsappLink(mesaj)} target="_blank" rel="noopener">WhatsApp ile sor</a></div>
